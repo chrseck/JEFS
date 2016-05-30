@@ -1,0 +1,45 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "SSIS", "ETL_Framework\SSIS.dtproj", "{3E680AD2-548A-4AB3-8912-973F624A4652}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "ConfigDB", "DB\ETL_Metadata\ConfigDB.sqlproj", "{8F8747C4-AD01-47F1-A6E4-7C40A60B007E}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "SSISDB", "DB\SSISDB\SSISDB.sqlproj", "{BB65CB84-612C-44E0-87A2-240411D866BC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Development|Any CPU = Development|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3E680AD2-548A-4AB3-8912-973F624A4652}.Debug|Any CPU.ActiveCfg = Development
+		{3E680AD2-548A-4AB3-8912-973F624A4652}.Debug|Any CPU.Build.0 = Development
+		{3E680AD2-548A-4AB3-8912-973F624A4652}.Development|Any CPU.ActiveCfg = Development
+		{3E680AD2-548A-4AB3-8912-973F624A4652}.Development|Any CPU.Build.0 = Development
+		{3E680AD2-548A-4AB3-8912-973F624A4652}.Release|Any CPU.ActiveCfg = Development
+		{3E680AD2-548A-4AB3-8912-973F624A4652}.Release|Any CPU.Build.0 = Development
+		{8F8747C4-AD01-47F1-A6E4-7C40A60B007E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F8747C4-AD01-47F1-A6E4-7C40A60B007E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F8747C4-AD01-47F1-A6E4-7C40A60B007E}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{8F8747C4-AD01-47F1-A6E4-7C40A60B007E}.Development|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F8747C4-AD01-47F1-A6E4-7C40A60B007E}.Development|Any CPU.Build.0 = Debug|Any CPU
+		{8F8747C4-AD01-47F1-A6E4-7C40A60B007E}.Development|Any CPU.Deploy.0 = Debug|Any CPU
+		{8F8747C4-AD01-47F1-A6E4-7C40A60B007E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F8747C4-AD01-47F1-A6E4-7C40A60B007E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F8747C4-AD01-47F1-A6E4-7C40A60B007E}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{BB65CB84-612C-44E0-87A2-240411D866BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB65CB84-612C-44E0-87A2-240411D866BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB65CB84-612C-44E0-87A2-240411D866BC}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{BB65CB84-612C-44E0-87A2-240411D866BC}.Development|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB65CB84-612C-44E0-87A2-240411D866BC}.Development|Any CPU.Build.0 = Debug|Any CPU
+		{BB65CB84-612C-44E0-87A2-240411D866BC}.Development|Any CPU.Deploy.0 = Debug|Any CPU
+		{BB65CB84-612C-44E0-87A2-240411D866BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB65CB84-612C-44E0-87A2-240411D866BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB65CB84-612C-44E0-87A2-240411D866BC}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

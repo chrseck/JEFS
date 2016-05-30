@@ -4,7 +4,7 @@
   DTS:CreationDate="8/20/2014 2:21:10 PM"
   DTS:CreationName="SSIS.Package.3"
   DTS:CreatorComputerName="NBHB240"
-  DTS:CreatorName="PTSGroup\cseck"
+  DTS:CreatorName="Christoph Seck"
   DTS:DTSID="{D8FB3E25-23DD-40F3-BA9D-8A75579F7941}"
   DTS:EnableConfig="True"
   DTS:ExecutableType="SSIS.Package.3"
@@ -13,8 +13,8 @@
   DTS:ObjectName="Master"
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
-  DTS:VersionBuild="644"
-  DTS:VersionGUID="{5082F710-BFA6-461A-9AB3-C3C703642CD9}"
+  DTS:VersionBuild="645"
+  DTS:VersionGUID="{3A54F490-39B1-450C-A0B2-22F060F78B71}"
   DTS:VersionMinor="1">
   <DTS:Property
     DTS:Name="PackageFormatVersion">6</DTS:Property>
@@ -28,7 +28,7 @@
         DTS:Name="SmtpServer">@[$Project::SMTPServer]</DTS:PropertyExpression>
       <DTS:ObjectData>
         <SmtpConnectionManager
-          ConnectionString="SmtpServer=mail.kigroup.de;UseWindowsAuthentication=False;EnableSsl=False;" />
+          ConnectionString="SmtpServer=mail.YourSMTPServer.de;UseWindowsAuthentication=False;EnableSsl=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
@@ -371,7 +371,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="MailAddress">
       <DTS:VariableValue
-        DTS:DataType="8">c.seck@kigroup.de</DTS:VariableValue>
+        DTS:DataType="8">chrseck@gmail.com</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -483,7 +483,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="str_StartTime">
       <DTS:VariableValue
-        DTS:DataType="8">2016-05-19 11:58:46.000</DTS:VariableValue>
+        DTS:DataType="8">2016-05-30 14:58:06.000</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -890,8 +890,8 @@
           <DTS:ObjectData>
             <SendMailTask:SendMailTaskData
               SendMailTask:SMTPServer="{9843215E-D2E8-4372-BD2A-6A1F7DD6F365}"
-              SendMailTask:From="c.seck@kigroup.de"
-              SendMailTask:To="c.seck@kigroup.de"
+              SendMailTask:From="chrseck@gmail.com"
+              SendMailTask:To="chrseck@gmail.com"
               SendMailTask:Subject="Load on server Dev  failed"
               SendMailTask:MessageSource="Load failed on server  ,''&#xA;&#xA;Job Summary ([etljob].[vw_JobExecution] with JobExecutionID = 0): &#xA;&#xA;Error Details ([etljob].[vw_LoadErrorDetail] with JobExecutionID = 0): " xmlns:SendMailTask="www.microsoft.com/sqlserver/dts/tasks/sendmailtask" />
           </DTS:ObjectData>
@@ -1102,7 +1102,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Log WasSucccess"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; Microsoft SQL Server 2008 R2; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="6">
+          DTS:ThreadHint="7">
           <DTS:Variables />
           <DTS:LoggingOptions
             DTS:FilterKind="0" />
@@ -1282,7 +1282,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Success Mail"
           DTS:TaskContact="Send Mail Task; Microsoft Corporation; SQL Server 2014; © 2014 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="6">
+          DTS:ThreadHint="7">
           <DTS:Variables />
           <DTS:LoggingOptions
             DTS:FilterKind="0" />
@@ -1299,8 +1299,8 @@ Use Filter JobExecutionID = "  +  (DT_WSTR, 20) @[User::JobExecutionID]</DTS:Pro
           <DTS:ObjectData>
             <SendMailTask:SendMailTaskData
               SendMailTask:SMTPServer="{9843215E-D2E8-4372-BD2A-6A1F7DD6F365}"
-              SendMailTask:From="c.seck@kigroup.de"
-              SendMailTask:To="c.seck@kigroup.de"
+              SendMailTask:From="chrseck@gmail.com"
+              SendMailTask:To="chrseck@gmail.com"
               SendMailTask:Subject="Load on server  Dev  OK"
               SendMailTask:MessageSource="Load on server  , OK.&#xA;For Details compare [etljob].[vw_JobStepExecution] and [etljob].[vw_JobExecution] in DB Cong &#xA;Use Filter JobExecutionID = 0" xmlns:SendMailTask="www.microsoft.com/sqlserver/dts/tasks/sendmailtask" />
           </DTS:ObjectData>
@@ -1314,7 +1314,7 @@ Use Filter JobExecutionID = "  +  (DT_WSTR, 20) @[User::JobExecutionID]</DTS:Pro
           DTS:LocaleID="-1"
           DTS:ObjectName="UpdateExecutionLogs"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="7">
+          DTS:ThreadHint="6">
           <DTS:Variables />
           <DTS:LoggingOptions
             DTS:FilterKind="0" />
@@ -1378,7 +1378,7 @@ Use Filter JobExecutionID = "  +  (DT_WSTR, 20) @[User::JobExecutionID]</DTS:Pro
           DTS:LocaleID="-1"
           DTS:ObjectName="Wait"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="7">
+          DTS:ThreadHint="6">
           <DTS:Variables />
           <DTS:LoggingOptions
             DTS:FilterKind="0" />
@@ -1412,8 +1412,8 @@ Use Filter JobExecutionID = "  +  (DT_WSTR, 20) @[User::JobExecutionID]</DTS:Pro
           <DTS:ObjectData>
             <SendMailTask:SendMailTaskData
               SendMailTask:SMTPServer="{9843215E-D2E8-4372-BD2A-6A1F7DD6F365}"
-              SendMailTask:From="c.seck@kigroup.de"
-              SendMailTask:To="c.seck@kigroup.de"
+              SendMailTask:From="chrseck@gmail.com"
+              SendMailTask:To="chrseck@gmail.com"
               SendMailTask:Subject="Warning for Load on server Dev"
               SendMailTask:MessageSource="Warnings for Load on server  ,''&#xA;&#xA;Job Summary ([etljob].[vw_JobExecution] with JobExecutionID = 0): &#xA;&#xA;Error Details ([etljob].[vw_LoadErrorDetail] with JobExecutionID = 0): " xmlns:SendMailTask="www.microsoft.com/sqlserver/dts/tasks/sendmailtask" />
           </DTS:ObjectData>
@@ -2135,7 +2135,7 @@ Use Filter JobExecutionID = "  +  (DT_WSTR, 20) @[User::JobExecutionID]</DTS:Pro
           DTS:LocaleID="-1"
           DTS:ObjectName="Stop"
           DTS:TaskContact="Expression Task;Microsoft Corporation; SQL Server 2012; � 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="2">
+          DTS:ThreadHint="1">
           <DTS:Variables />
           <DTS:LoggingOptions
             DTS:FilterKind="0" />
@@ -2185,7 +2185,7 @@ Use Filter JobExecutionID = "  +  (DT_WSTR, 20) @[User::JobExecutionID]</DTS:Pro
           DTS:LocaleID="-1"
           DTS:ObjectName="WaitForBlockingPackages"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="1">
+          DTS:ThreadHint="2">
           <DTS:Variables />
           <DTS:LoggingOptions
             DTS:FilterKind="0" />
@@ -2942,7 +2942,7 @@ Use Filter JobExecutionID = "  +  (DT_WSTR, 20) @[User::JobExecutionID]</DTS:Pro
               DTS:LocaleID="-1"
               DTS:ObjectName="Reset Log"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="1">
+              DTS:ThreadHint="0">
               <DTS:Variables />
               <DTS:LoggingOptions
                 DTS:FilterKind="0" />
@@ -2968,7 +2968,7 @@ Use Filter JobExecutionID = "  +  (DT_WSTR, 20) @[User::JobExecutionID]</DTS:Pro
               DTS:LocaleID="-1"
               DTS:ObjectName="StopWaiting"
               DTS:TaskContact="Expression Task;Microsoft Corporation; SQL Server 2012; � 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="1">
+              DTS:ThreadHint="0">
               <DTS:Variables />
               <DTS:LoggingOptions
                 DTS:FilterKind="0" />
@@ -2986,7 +2986,7 @@ Use Filter JobExecutionID = "  +  (DT_WSTR, 20) @[User::JobExecutionID]</DTS:Pro
               DTS:LocaleID="-1"
               DTS:ObjectName="WaitForExclude"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="0">
+              DTS:ThreadHint="1">
               <DTS:Variables />
               <DTS:LoggingOptions
                 DTS:FilterKind="0" />
@@ -3233,8 +3233,8 @@ Use Filter JobExecutionID = "  +  (DT_WSTR, 20) @[User::JobExecutionID]</DTS:Pro
           <DTS:ObjectData>
             <SendMailTask:SendMailTaskData
               SendMailTask:SMTPServer="{9843215E-D2E8-4372-BD2A-6A1F7DD6F365}"
-              SendMailTask:From="c.seck@kigroup.de"
-              SendMailTask:To="c.seck@kigroup.de"
+              SendMailTask:From="chrseck@gmail.com"
+              SendMailTask:To="chrseck@gmail.com"
               SendMailTask:Subject="Load on server  Dev  unexpected  failure"
               SendMailTask:MessageSource="Unexpected Failure on server: &#xA; ,'' &#xA;For Details compare  [etljob].[vw_JobExecution] and [etljob].[vw_LoadErrorDetail] in DBConf &#xA;Use Filter JobExecutionID = 0" xmlns:SendMailTask="www.microsoft.com/sqlserver/dts/tasks/sendmailtask" />
           </DTS:ObjectData>
@@ -4107,7 +4107,9 @@ Use Filter JobExecutionID = "  +  (DT_WSTR, 20) @[User::JobExecutionID]</DTS:Pro
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -4129,7 +4131,9 @@ Use Filter JobExecutionID = "  +  (DT_WSTR, 20) @[User::JobExecutionID]</DTS:Pro
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -4151,7 +4155,9 @@ Use Filter JobExecutionID = "  +  (DT_WSTR, 20) @[User::JobExecutionID]</DTS:Pro
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <ContainerLayout
@@ -4556,6 +4562,101 @@ Use Filter JobExecutionID = "  +  (DT_WSTR, 20) @[User::JobExecutionID]</DTS:Pro
           Id="Package\Start\Init"
           TopLeft="126.679025653951,186.375047097561" />
         <NodeLayout
+          Size="141.6,41.6"
+          Id="Package\Start\OBI Logging Init\CommentLog"
+          TopLeft="84.9695028013455,76.7636431680433" />
+        <NodeLayout
+          Size="214.4,41.6"
+          Id="Package\Start\OBI Logging Init\ExecutionInstanceGUID Log"
+          TopLeft="48.9599782457504,213.365427353573" />
+        <NodeLayout
+          Size="130.4,41.6"
+          Id="Package\Start\OBI Logging Init\GetAuditID"
+          TopLeft="97.5885505501448,6.4235353604048" />
+        <NodeLayout
+          Size="185.6,41.6"
+          Id="Package\Start\OBI Logging Init\ServerExecutionID Log"
+          TopLeft="60.6028353399507,144.044927403371" />
+        <EdgeLayout
+          Id="Package\Start\OBI Logging Init.PrecedenceConstraints[Einschränkung]"
+          TopLeft="159.279026675745,48.0235353604048">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,28.7401078076385"
+              Start="0,0"
+              End="0,21.2401078076385">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,21.2401078076385" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Start\OBI Logging Init.PrecedenceConstraints[Einschränkung 1]"
+          TopLeft="154.586169070648,118.363643168043">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,25.6812842353275"
+              Start="0,0"
+              End="0,18.1812842353275">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18.1812842353275" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Start\OBI Logging Init.PrecedenceConstraints[Einschränkung 2]"
+          TopLeft="154.781406792851,185.644927403371">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,27.7204999502017"
+              Start="0,0"
+              End="0,20.2204999502017">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.2204999502017" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43.2"
+          IsExpanded="False"
+          PanelSize="301.6,296.8"
+          Size="180,43.2"
+          Id="Package\Start\OBI Logging Init"
+          TopLeft="83.6571439275935,14.6764707169318" />
+        <NodeLayout
           Size="173.6,41.6"
           Id="Package\Start\Set Global Starttime"
           TopLeft="87.1790256539516,320.937615568217" />
@@ -4666,7 +4767,9 @@ Use Filter JobExecutionID = "  +  (DT_WSTR, 20) @[User::JobExecutionID]</DTS:Pro
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <ContainerLayout
@@ -4832,95 +4935,6 @@ Use Filter JobExecutionID = "  +  (DT_WSTR, 20) @[User::JobExecutionID]</DTS:Pro
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="130.4,41.6"
-          Id="Package\Start\OBI Logging Init\GetAuditID"
-          TopLeft="97.5885505501448,6.4235353604048" />
-        <NodeLayout
-          Size="141.6,41.6"
-          Id="Package\Start\OBI Logging Init\CommentLog"
-          TopLeft="84.9695028013455,76.7636431680433" />
-        <NodeLayout
-          Size="185.6,41.6"
-          Id="Package\Start\OBI Logging Init\ServerExecutionID Log"
-          TopLeft="60.6028353399507,144.044927403371" />
-        <NodeLayout
-          Size="214.4,41.6"
-          Id="Package\Start\OBI Logging Init\ExecutionInstanceGUID Log"
-          TopLeft="48.9599782457504,213.365427353573" />
-        <EdgeLayout
-          Id="Package\Start\OBI Logging Init.PrecedenceConstraints[Einschränkung]"
-          TopLeft="159.279026675745,48.0235353604048">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,28.7401078076385"
-              Start="0,0"
-              End="0,21.2401078076385">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,21.2401078076385" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Start\OBI Logging Init.PrecedenceConstraints[Einschränkung 1]"
-          TopLeft="154.586169070648,118.363643168043">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,25.6812842353275"
-              Start="0,0"
-              End="0,18.1812842353275">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,18.1812842353275" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Start\OBI Logging Init.PrecedenceConstraints[Einschränkung 2]"
-          TopLeft="154.781406792851,185.644927403371">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,27.7204999502017"
-              Start="0,0"
-              End="0,20.2204999502017">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,20.2204999502017" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <ContainerLayout
-          HeaderHeight="43.2"
-          IsExpanded="False"
-          PanelSize="301.6,296.8"
-          Size="180,43.2"
-          Id="Package\Start\OBI Logging Init"
-          TopLeft="83.6571439275935,14.6764707169318" />
         <EdgeLayout
           Id="Package\Start.PrecedenceConstraints[Einschränkung]"
           TopLeft="173.668084790773,57.8764707169318">
@@ -5106,7 +5120,7 @@ Use Filter JobExecutionID = "  +  (DT_WSTR, 20) @[User::JobExecutionID]</DTS:Pro
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-25.304453125,17.502175304799,50.60890625,11.609375"
+              BoundingBox="-25.304453125,17.502175304799,52.6259765625,11.6630859375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -5130,7 +5144,7 @@ Use Filter JobExecutionID = "  +  (DT_WSTR, 20) @[User::JobExecutionID]</DTS:Pro
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-25.304453125,10.1217829434523,50.60890625,11.609375"
+              BoundingBox="-25.304453125,10.1217829434523,52.6259765625,11.6630859375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -5154,7 +5168,7 @@ Use Filter JobExecutionID = "  +  (DT_WSTR, 20) @[User::JobExecutionID]</DTS:Pro
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-33.9655859375,15.0627457272221,67.931171875,16"
+              BoundingBox="-33.9655859375,15.0627457272221,70.36328125,16"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -5178,7 +5192,7 @@ Use Filter JobExecutionID = "  +  (DT_WSTR, 20) @[User::JobExecutionID]</DTS:Pro
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="3.3653683147141,5,67.931171875,16"
+              BoundingBox="3.3653683147141,5,70.36328125,16"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -5202,7 +5216,7 @@ Use Filter JobExecutionID = "  +  (DT_WSTR, 20) @[User::JobExecutionID]</DTS:Pro
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-25.304453125,11.8070777067265,50.60890625,11.609375"
+              BoundingBox="-25.304453125,11.8070777067265,52.6259765625,11.6630859375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -5226,7 +5240,7 @@ Use Filter JobExecutionID = "  +  (DT_WSTR, 20) @[User::JobExecutionID]</DTS:Pro
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-25.304453125,15.5668823829573,50.60890625,11.609375"
+              BoundingBox="-25.304453125,15.5668823829573,52.6259765625,11.6630859375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -5250,7 +5264,7 @@ Use Filter JobExecutionID = "  +  (DT_WSTR, 20) @[User::JobExecutionID]</DTS:Pro
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-33.9655859375,6.829411694995,67.931171875,16"
+              BoundingBox="-33.9655859375,6.829411694995,70.36328125,16"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -5258,7 +5272,7 @@ Use Filter JobExecutionID = "  +  (DT_WSTR, 20) @[User::JobExecutionID]</DTS:Pro
           Text="If the error is thrown by &quot;Fail?&quot;&#xA;&quot;AbortErrorHandler&quot; was set to 1&#xA;thus this global Handler is disabled"
           ParentId="Package.EventHandlers[OnError]"
           FontInfo="{assembly:Null}"
-          Size="214.4,NaN"
+          Size="214.4,72"
           Id="86555834-0d5f-4d58-b1cd-2b9518324cf8"
           TopLeft="333.142862816246,104.000001458561" />
       </GraphLayout>

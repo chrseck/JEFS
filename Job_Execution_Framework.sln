@@ -2,6 +2,9 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "SSIS", "ETL_Framework\SSIS.dtproj", "{3E680AD2-548A-4AB3-8912-973F624A4652}"
+	ProjectSection(ProjectDependencies) = postProject
+		{8F8747C4-AD01-47F1-A6E4-7C40A60B007E} = {8F8747C4-AD01-47F1-A6E4-7C40A60B007E}
+	EndProjectSection
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "ConfigDB", "DB\ETL_Metadata\ConfigDB.sqlproj", "{8F8747C4-AD01-47F1-A6E4-7C40A60B007E}"
 EndProject

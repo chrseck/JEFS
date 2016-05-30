@@ -4,7 +4,7 @@
   DTS:CreationDate="8/20/2014 2:21:10 PM"
   DTS:CreationName="SSIS.Package.3"
   DTS:CreatorComputerName="NBHB240"
-  DTS:CreatorName="PTSGroup\cseck"
+  DTS:CreatorName="Christoph Seck"
   DTS:DTSID="{16F1E7DB-2CC6-4D86-BECA-CBA4061C2C6C}"
   DTS:EnableConfig="True"
   DTS:ExecutableType="SSIS.Package.3"
@@ -13,8 +13,8 @@
   DTS:ObjectName="RecoverStops"
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
-  DTS:VersionBuild="599"
-  DTS:VersionGUID="{83E86600-73E9-44A6-9340-6084B64B8064}">
+  DTS:VersionBuild="600"
+  DTS:VersionGUID="{A7D64A2E-ACE1-402E-9940-05260D102B32}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">6</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27,7 +27,7 @@
         DTS:Name="SmtpServer">@[$Project::SMTPServer]</DTS:PropertyExpression>
       <DTS:ObjectData>
         <SmtpConnectionManager
-          ConnectionString="SmtpServer=mail.dpd.de;UseWindowsAuthentication=False;EnableSsl=False;" />
+          ConnectionString="SmtpServer=mail.YourSMTPServer.de;UseWindowsAuthentication=False;EnableSsl=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
@@ -326,7 +326,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="MailAddress">
       <DTS:VariableValue
-        DTS:DataType="8">martin.wagner@test.com</DTS:VariableValue>
+        DTS:DataType="8">chrseck@gmail.com</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -1285,7 +1285,7 @@
               DTS:LocaleID="-1"
               DTS:ObjectName="StopWaiting"
               DTS:TaskContact="Expression Task;Microsoft Corporation; SQL Server 2012; � 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="1">
+              DTS:ThreadHint="0">
               <DTS:Variables />
               <DTS:LoggingOptions
                 DTS:FilterKind="0" />
@@ -1303,7 +1303,7 @@
               DTS:LocaleID="-1"
               DTS:ObjectName="WaitForSlot"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="0">
+              DTS:ThreadHint="1">
               <DTS:Variables />
               <DTS:LoggingOptions
                 DTS:FilterKind="0" />
@@ -1876,35 +1876,35 @@
     </DTS:EventHandler>
   </DTS:EventHandlers>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
-<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
-<!--If you manually edit this section and make a mistake, you can delete it. -->
-<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<!--Dieser CDATA-Abschnitt enthält die Layoutinformationen des Pakets, z.B. Informationen wie X-/Y-Koordinaten, Breite und Höhe.-->
+<!--Wenn Sie diesen Abschnitt manuell ändern und Ihnen ein Fehler unterläuft, können Sie ihn löschen. -->
+<!--Das Paket kann zwar weiterhin normal geladen werden, aber frühere Layoutinformationen gehen verloren, und die Elemente auf der Entwurfsoberfläche werden vom Designer automatisch neu angeordnet.-->
 <Objects
   Version="sql11">
-  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <!--Jeder darunter liegende Knoten enthält Eigenschaften, die sich nicht auf das Laufzeitverhalten auswirken.-->
   <Package
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
         Capacity="64" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="202,42"
+          Size="201.6,41.6"
           Id="Package\Finish Partials\Count Running Recoveries"
           TopLeft="151.1,5.49999999999994" />
         <NodeLayout
-          Size="101,42"
+          Size="100.8,41.6"
           Id="Package\Finish Partials\Stop"
           TopLeft="72.3,73.1" />
         <NodeLayout
-          Size="210,42"
+          Size="209.6,41.6"
           Id="Package\Finish Partials\Update RecoveryItemStatus"
           TopLeft="277.45,140.7" />
         <NodeLayout
-          Size="205,42"
+          Size="204.8,41.6"
           Id="Package\Finish Partials\UpdateRecovery Final"
           TopLeft="20.3,140.7" />
         <NodeLayout
-          Size="101,42"
+          Size="100.8,41.6"
           Id="Package\Finish Partials\Wait"
           TopLeft="331.95,73.1" />
         <EdgeLayout
@@ -2026,28 +2026,28 @@
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="516,210"
-          Size="516,253"
+          PanelSize="516,209.6"
+          Size="516,252.8"
           Id="Package\Finish Partials"
           TopLeft="1048.08414502987,402" />
         <NodeLayout
-          Size="128,42"
+          Size="128,41.6"
           Id="Package\LoopOverPackages\CheckStop"
           TopLeft="175.822449254156,218.79328005645" />
         <NodeLayout
-          Size="144,42"
+          Size="144,41.6"
           Id="Package\LoopOverPackages\ExecuteRecovery\GetParameter"
           TopLeft="39.2872485546085,16.1058858213127" />
         <NodeLayout
-          Size="133,42"
+          Size="132.8,41.6"
           Id="Package\LoopOverPackages\ExecuteRecovery\InitPackage"
           TopLeft="44.7872485546085,83.1495841847354" />
         <NodeLayout
-          Size="173,42"
+          Size="172.8,41.6"
           Id="Package\LoopOverPackages\ExecuteRecovery\SetParameterValues"
           TopLeft="24.7872485546085,150.193282548158" />
         <NodeLayout
-          Size="142,42"
+          Size="142.4,41.6"
           Id="Package\LoopOverPackages\ExecuteRecovery\Start Package"
           TopLeft="40.2872485546085,217.236980911581" />
         <EdgeLayout
@@ -2119,20 +2119,20 @@
         <ContainerLayout
           HeaderHeight="43.2"
           IsExpanded="True"
-          PanelSize="230,294"
-          Size="230,337"
+          PanelSize="230.4,294.4"
+          Size="230.4,336.8"
           Id="Package\LoopOverPackages\ExecuteRecovery"
           TopLeft="313.009186618947,344.447060972762" />
         <NodeLayout
-          Size="202,42"
+          Size="201.6,41.6"
           Id="Package\LoopOverPackages\FreeSlotWait\Count Running Recoveries"
           TopLeft="84.9,5.49999999999994" />
         <NodeLayout
-          Size="136,42"
+          Size="136,41.6"
           Id="Package\LoopOverPackages\FreeSlotWait\StopWaiting"
           TopLeft="13.9489796335428,79.2596634610715" />
         <NodeLayout
-          Size="133,42"
+          Size="132.8,41.6"
           Id="Package\LoopOverPackages\FreeSlotWait\WaitForSlot"
           TopLeft="230.140816701883,79.2596634610715" />
         <EdgeLayout
@@ -2210,20 +2210,20 @@
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="378,146"
-          Size="378,189"
+          PanelSize="377.6,145.6"
+          Size="377.6,188.8"
           Id="Package\LoopOverPackages\FreeSlotWait"
           TopLeft="51.3,5.50000000000003" />
         <NodeLayout
-          Size="186,42"
+          Size="185.6,41.6"
           Id="Package\LoopOverPackages\GetNextRecoveryItem"
           TopLeft="337.009186618947,272.676469987652" />
         <NodeLayout
-          Size="101,42"
+          Size="100.8,41.6"
           Id="Package\LoopOverPackages\Stop"
           TopLeft="25.822449254156,272.676469987652" />
         <NodeLayout
-          Size="210,42"
+          Size="209.6,41.6"
           Id="Package\LoopOverPackages\Update RecoveryItemStatus"
           TopLeft="9.82244925415603,732.068071464683" />
         <EdgeLayout
@@ -2427,36 +2427,36 @@
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="567,780"
-          Size="567,823"
+          PanelSize="567.2,780"
+          Size="567.2,823.2"
           Id="Package\LoopOverPackages"
           TopLeft="412.07302406791,117" />
         <NodeLayout
-          Size="142,42"
+          Size="142.4,41.6"
           Id="Package\Start\Check If Stop"
           TopLeft="60.3221595090214,5.49999999999994" />
         <NodeLayout
-          Size="206,42"
+          Size="206.4,41.6"
           Id="Package\Start\FillRecoveryItemForRestart"
           TopLeft="29.3221595090214,145.474511584224" />
         <NodeLayout
-          Size="160,42"
+          Size="160,41.6"
           Id="Package\Start\Get Server Name"
           TopLeft="52.3221595090214,285.449023168447" />
         <NodeLayout
-          Size="166,42"
+          Size="166.4,41.6"
           Id="Package\Start\GetMasterJobStep"
           TopLeft="49.3221595090214,425.423534752671" />
         <NodeLayout
-          Size="171,42"
+          Size="171.2,41.6"
           Id="Package\Start\GetTargetSystemID"
           TopLeft="46.8221595090214,355.436278960559" />
         <NodeLayout
-          Size="138,42"
+          Size="137.6,41.6"
           Id="Package\Start\InitRecovery"
           TopLeft="63.3221595090214,75.4872557921118" />
         <NodeLayout
-          Size="173,42"
+          Size="172.8,41.6"
           Id="Package\Start\Set Global Starttime"
           TopLeft="45.8221595090214,215.461767376336" />
         <EdgeLayout
@@ -2596,23 +2596,23 @@
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="258,502"
-          Size="258,545"
+          PanelSize="257.6,502.4"
+          Size="257.6,544.8"
           Id="Package\Start"
           TopLeft="85.06190310595,256" />
         <NodeLayout
-          Size="157,42"
+          Size="156.8,41.6"
           Id="Package\Start Missed Agent Jobs\ForEachMissedJob\Exec Agent Job"
           TopLeft="30.4857399376069,23.0117739033947" />
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="218,91"
-          Size="218,134"
+          PanelSize="217.6,91.2"
+          Size="217.6,134.4"
           Id="Package\Start Missed Agent Jobs\ForEachMissedJob"
           TopLeft="44.407147072448,97.364711982569" />
         <NodeLayout
-          Size="178,42"
+          Size="177.6,41.6"
           Id="Package\Start Missed Agent Jobs\GetMissedAgentJobs"
           TopLeft="64.407147072448,30.3411808033716" />
         <EdgeLayout
@@ -2640,8 +2640,8 @@
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="302,267"
-          Size="302,310"
+          PanelSize="302.4,267.2"
+          Size="302.4,310.4"
           Id="Package\Start Missed Agent Jobs"
           TopLeft="1633.09526599183,373.5" />
         <EdgeLayout

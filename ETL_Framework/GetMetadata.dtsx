@@ -4,16 +4,16 @@
   DTS:CreationDate="10/30/2014 3:15:44 PM"
   DTS:CreationName="SSIS.Package.7"
   DTS:CreatorComputerName="NBHB240"
-  DTS:CreatorName="PTSGroup\cseck"
+  DTS:CreatorName="Christoph Seck"
   DTS:DTSID="{E05F1D5F-ECB7-4448-9644-90CED3DB61B7}"
   DTS:ExecutableType="SSIS.Package.7"
-  DTS:LastModifiedProductVersion="11.0.3402.0"
+  DTS:LastModifiedProductVersion="11.0.6020.0"
   DTS:LocaleID="1031"
   DTS:ObjectName="GetMetadata"
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
-  DTS:VersionBuild="127"
-  DTS:VersionGUID="{29C21F47-5C0C-464B-978B-E5C910AF0403}">
+  DTS:VersionBuild="128"
+  DTS:VersionGUID="{AF4D05DB-89B4-4593-A8CD-5003AE327688}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">6</DTS:Property>
   <DTS:PackageParameters>
@@ -159,12 +159,12 @@
     </DTS:Executable>
   </DTS:Executables>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
-<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
-<!--If you manually edit this section and make a mistake, you can delete it. -->
-<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<!--Dieser CDATA-Abschnitt enthält die Layoutinformationen des Pakets, z.B. Informationen wie X-/Y-Koordinaten, Breite und Höhe.-->
+<!--Wenn Sie diesen Abschnitt manuell ändern und Ihnen ein Fehler unterläuft, können Sie ihn löschen. -->
+<!--Das Paket kann zwar weiterhin normal geladen werden, aber frühere Layoutinformationen gehen verloren, und die Elemente auf der Entwurfsoberfläche werden vom Designer automatisch neu angeordnet.-->
 <Objects
   Version="sql11">
-  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <!--Jeder darunter liegende Knoten enthält Eigenschaften, die sich nicht auf das Laufzeitverhalten auswirken.-->
   <Package
     design-time-name="Package">
     <LayoutInfo>

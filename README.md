@@ -8,7 +8,7 @@ Instances of the Master Package may run in parallel on the same server or on sev
 
 **Documentation**
 
-You can find the documentation ("JEFS Documentation.docx") as part of the SSIS project (misc. files)
+You can find the documentation ("JEFS Documentation.docx") as part of the SSIS project (misc. files) in the folder ETL_Framework
 
 **SQL Server Version**
 

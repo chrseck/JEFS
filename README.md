@@ -8,7 +8,7 @@ Instances of the Master Package may run in parallel on the same server or on sev
 
 **Documentation**
 
-You can find the documentation ("JEFS Documentation.docx") as part of the SSIS project (misc. files)
+You can find the documentation ("JEFS Documentation.docx") as part of the SSIS project (misc. files) or in the folder ETL_Framework
 
 **SQL Server Version**
 
@@ -25,7 +25,8 @@ There is a Solution "Job_Execution_Framework" with two database projects ("Confi
 **History and Thanks**
 
 The first version was developed for a company with several production plants that needed a central DWH for production data. Because of security constrains and the questions of load balancing it was necessary to distribute the ETL processes over different servers with the possibility of automatic or ad hoc reconfiguration.
-The second version was developed with Cluster Reply and utilized the new possibilities which came for SSIS with SQL Server 2012.
+The second version was developed with Cluster Reply and utilized the new possibilities which came for SSIS with SQL Server 2012. Special thanks here to Simone Zier and Vitali Altach.
+
 The third and current version was a complete reimplementation done during my time at Ceteris AG (www.ceteris.ag). The discussions in the open atmosphere at Ceteris greatly enhanced the original ideas. Without the feedback of guys like Thorsten Huss, Chris Jacob, Ben Kanter and Markus Schechner the Framework would be much buggier and still lack some important features. An optional interface for the Advanced Logging Components for SSIS from Ceteris is still included.
 Further input came from our main customers where we used and enhanced the Framework. Special thanks here to the DPD IT team.
 The deal with the customers always was: You do not have to pay for the usage of the framework, but all enhancements done at your site go back to the product and can be used by all other users of the product.
